@@ -65,6 +65,40 @@
     print_r($user);
     ?>
   </p>
+
+  <p>
+    <?PHP
+    class Food {
+      private $name;
+      private $weight;
+      private $taste;
+      private $color;
+
+      public function __construct($name, $weight, $taste, $color) {
+        $this->name = $name;
+        $this->name = $weight;
+        $this->taste = $taste;
+        $this->color = $color;
+      }
+
+      public function showFood() {
+        echo "食べ物の名前は{$this->name}です。<br>重さは{$this->weight}グラムです。<br>味は{$this->taste}です。<br>色は{$this->color}です。<br>";
+      }
+    }
+
+    echo "test class1<br>";
+    $sushi = new Food("お寿司", "50", "美味しい", "色々");
+    $sushi->showFood();
+
+    echo "<br />test class2 <br />";
+    $ramen = new Food("ラーメン", "300", "濃厚な豚骨味", "ちゃいろ");
+    $ramen->showFood();
+
+    echo "<br />test class3 <br />";
+    $chocolate = new Food("チョコレート", "50", "あまーい", "ブラウン");
+    $chocolate->showFood();
+    ?>
+  </p>
  </body>
 
  </html>
